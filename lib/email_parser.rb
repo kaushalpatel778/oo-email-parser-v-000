@@ -14,4 +14,12 @@ class EmailParser
   def parse
     emails = email.gsub(",","").split(" ").uniq { |x| x }
   end
+
 end
+=begin this method also works
+        def parse
+        emails.split.map do |email|
+          email.split(',')
+        end.flatten.uniq
+        end
+=end
